@@ -46,16 +46,17 @@ html {
 
 canvas {
   position: absolute;
-  top: 0px;
+  top: 5px;
   left: 0px;
+  width: 600px;
+  height: 620px;
   margin: 0%;
   padding: 0%;
-  border-radius: 9px 0px 0px 9px;
 }
 
 .contCentral {
   @include d.designContainerCentral;
-  gap: 0.5%;
+  gap: 0.2%;
 
   &>.contTop {
     @include l.layoutFlexboxRowCenter;
@@ -65,8 +66,8 @@ canvas {
     width: 82%;
     height: 12vh;
     padding: 0.5%;
-    margin: 2% auto;
-    margin-bottom: 0.6%;
+    margin: 1% auto;
+    margin-bottom: 0.3%;
     border-radius: 9px;
 
     &>.contOptions {
@@ -156,10 +157,11 @@ canvas {
 
   &>.main {
     @include l.layoutFlexboxColumCenter;
-    // @include g.displayGlassmorphismus;
-    // backdrop-filter: blur(1.6px);
-    width: 1200px;
-    height: 760px;
+    justify-content: flex-start;
+    @include g.displayGlassmorphismus;
+    backdrop-filter: blur(1.6px);
+    width: 82%;
+    height: 744px;
     padding: 0%;
     margin: 0% auto;
     margin-bottom: 0.8%;
@@ -168,28 +170,54 @@ canvas {
     gap: 0.2%;
 
     &>#infoLoad {
-      @include d.configurationLabel (v.$colorHell, 2.1rem);
-      font-weight: 900;
-      @include g.GlassMorphismus6;
-      padding: 3%;
+      @include g.GlassMorphismus9;
+      @include d.configurationLabel (v.$colorHell, 1.2rem);
+      margin: 0.6% auto;
+      padding-bottom: 3%;
+      width: 450px;
+      height: 44px;
+      font-weight: 700;
+      
     }
 
-    //  Element Image
-    &>.contImage {
+    &>.contImgInfo {
       @include l.layoutFlexboxRowCenter;
-      height: 100%;
-      margin: 0% auto;
-      padding: 0%;
-      display: none;
+      justify-content: space-between;
+      align-items: flex-start;
+      height:700px;
+      padding: 1%;
+      border-radius: 0%;
+      gap: 5%;
 
-      border: 1px solid red;
-
-      &>.imgCentral {
-        @include d.imageGenerall;
+      //  Element Image
+      &>.contImage {
+        @include l.layoutFlexboxRowCenter;
+        @include g.GlassMorphismus1;
+        width: 600px;
+        height: 620px;
         margin: 0% auto;
         padding: 0%;
-        object-fit:fill;
-        z-index: 100;
+        border-radius: 6px;
+        border: 3px solid v.$backgroundColorDunkelGray4T;
+
+        &>.imgCentral {
+          @include d.imageGenerall;
+          width: inherit;
+          height: inherit;
+          margin: 0% auto;
+          padding: 0%;
+          object-fit: fill;
+          z-index: 100;
+        }
+      }
+
+      //  Element Info
+      &>.contInfo {
+        @include l.layoutFlexboxRowCenter;
+        @include n.neuMorphismus5;
+        height: 620px;
+        border: 3px solid v.$backgroundColorHellGrayT3;
+        border-radius: 6px;
       }
     }
   }
