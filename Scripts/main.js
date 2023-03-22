@@ -56,7 +56,7 @@ async function recognitionImage() {
             labels.map(async label => {
                 const descriptions = []
                 for (let i = 1; i <= 6; i++) {
-                    const img = await faceapi.fetchImage(`https://github.com/tonyfverdu/face-recognition/tree/main/assets/Members/${label}/${i}.jpg`)
+                    const img = await faceapi.fetchImage(`./assets/Members/${label}/${i}.jpg`)
                     const detections = await faceapi
                         .detectSingleFace(img)
                         .withFaceLandmarks()
