@@ -69,7 +69,7 @@
 @mixin imageGenerall {
   position: relative;
   width: 100%;
-  object-fit:contain;
+  object-fit:cover;
   image-rendering: optimizeSpeed;
 }
 

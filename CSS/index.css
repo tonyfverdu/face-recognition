@@ -194,25 +194,35 @@ canvas {
 .contCentral > .main {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  justify-content: space-between;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.4px);
-  border: 1px solid rgba(255, 255, 255, 0.37);
-  backdrop-filter: blur(1.6px);
-  width: 82%;
-  height: 600px;
+  width: 1200px;
+  height: 760px;
   padding: 0%;
   margin: 0% auto;
   margin-bottom: 0.8%;
   border-radius: 9px;
   overflow: hidden;
   gap: 0.2%;
+}
+.contCentral > .main > #infoLoad {
+  position: relative;
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: rgb(246, 240, 240);
+  margin: 0% 2%;
+  padding: 1%;
+  font-weight: 900;
+  background: rgba(5, 247, 5, 0.3);
+  border-radius: 9px;
+  box-shadow: 0px 1px 2px 2px rgb(184, 255, 134), inset 6px 6px 12px 0px #03fb03, 0px 1px 3px 3px #99f0b6;
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 2px solid rgba(70, 125, 75, 0.68);
+  padding: 3%;
 }
 .contCentral > .main > .contImage {
   position: relative;
@@ -225,14 +235,17 @@ canvas {
   margin: 0% auto;
   padding: 0%;
   display: none;
+  border: 1px solid red;
 }
 .contCentral > .main > .contImage > .imgCentral {
   position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   image-rendering: optimizeSpeed;
   margin: 0% auto;
   padding: 0%;
+  object-fit: fill;
+  z-index: 100;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,2 +1,7 @@
-import { imageUpload, contImage, img} from "./initialitation.js"
+import { imageUpload, contImage } from "./initialitation.js"
+
+
+
+
+
 

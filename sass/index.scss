@@ -155,18 +155,24 @@ canvas {
   }
 
   &>.main {
-    @include l.layoutFlexboxRowCenter;
-    justify-content: space-between;
-    @include g.displayGlassmorphismus;
-    backdrop-filter: blur(1.6px);
-    width: 82%;
-    height: 600px;
+    @include l.layoutFlexboxColumCenter;
+    // @include g.displayGlassmorphismus;
+    // backdrop-filter: blur(1.6px);
+    width: 1200px;
+    height: 760px;
     padding: 0%;
     margin: 0% auto;
     margin-bottom: 0.8%;
     border-radius: 9px;
     overflow: hidden;
     gap: 0.2%;
+
+    &>#infoLoad {
+      @include d.configurationLabel (v.$colorHell, 2.1rem);
+      font-weight: 900;
+      @include g.GlassMorphismus6;
+      padding: 3%;
+    }
 
     //  Element Image
     &>.contImage {
@@ -176,10 +182,14 @@ canvas {
       padding: 0%;
       display: none;
 
+      border: 1px solid red;
+
       &>.imgCentral {
         @include d.imageGenerall;
         margin: 0% auto;
         padding: 0%;
+        object-fit:fill;
+        z-index: 100;
       }
     }
   }
