@@ -14,6 +14,14 @@
 <body>
   <div class="contCentral">
     <div class="contTop">
+      <div class="contOptionCamera">
+        <label for="visualizatorCamera">Camera:</label>
+        <div class="contCheckbox">
+          <label for="faceRecognition">Face Recognition</label>
+          <input type="checkbox" id="faceRecognition" name="faceRecognition" value="off">
+        </div>
+      </div>
+
       <div class="contOptions">
         <div class="contOptionImage">
           <label for="visualizatorChose">Choose an image</label>
@@ -23,19 +31,25 @@
         </div>
       </div>
     </div>
+
     <main class="main">
       <p id="infoLoad"></p>
       <div id="contImgInfo" class="contImgInfo">
         <div id="containerImg" class="contImage">
           <img id="imageCentral" class="imgCentral">
         </div>
-        
-        <div class="contInfo">
 
+        <div class="contInfo">
+          <div class="contVideo" id="video-container">
+            <video id="cameraWeb" class="video" width="800px" height="600px" preload="metadata" controls autoplay muted
+              poster="./assets/imgTest/Let_it_be.jpg">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
-      
-      
+
+
     </main>
   </div>
 

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-import { url_Models, imageUpload, main, contImgInfo, infoLoad, contImage, img } from "./initialitation.js"
-import { promiseAllFaceapi, printInfo } from "./functions.js"
+import { url_Models, imageUpload, main, infoLoad, img, cameraWeb } from "./initialitation.js"
+import { promiseAllFaceapi, printInfo, inputCamera } from "./functions.js"
 
 
 export let newCanvas = false
@@ -11,10 +11,9 @@ promiseAllFaceapi(recognitionImage, url_Models)
 //  2.-  Function "recognitionImage":  recognition of image faces
 async function recognitionImage() {
     printInfo()
-    
+
     imageUpload.addEventListener("change", async (e) => {
-        console.log('newCanvas', newCanvas)
-        //  console.log(e.target.value)
+        infoLoad.textContent = e.target.value
         if (newCanvas) document.querySelector("canvas").remove()
         newCanvas = true
         const theImage = await faceapi.bufferToImage(imageUpload.files[0])
@@ -65,5 +64,22 @@ function loadLabeledImages() {
         })
     )
 }
+
 */
-//  https://github.com/tonyfverdu/face-recognition/blob/main/assets/Members/George%20Harrison/1.jpg
+/////////////////////////////////////////////////////////////////////////
+//  B.-  Select Input ("camera", "video" and "image")  ******************************
+// 1.- Camera
+faceRecognition.addEventListener('change', (ev) => {
+    if(ev.target.value === 'off') {
+        ev.target.value = "on"
+    } else {
+        ev.target.value = 'off'
+    }
+
+    if(ev.target.value === 'on') {
+        inputCamera()
+    } else {
+        cameraWeb.pause()
+    }
+}, false)
+

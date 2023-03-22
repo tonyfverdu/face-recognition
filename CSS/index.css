@@ -42,6 +42,16 @@ canvas {
   padding: 0%;
 }
 
+#myCanvas {
+  position: absolute;
+  top: 4px;
+  left: 29px;
+  width: 800px;
+  height: 600px;
+  margin: 0%;
+  padding: 0%;
+}
+
 .contCentral {
   position: relative;
   display: flex;
@@ -80,6 +90,76 @@ canvas {
   margin: 1% auto;
   margin-bottom: 0.3%;
   border-radius: 9px;
+}
+.contCentral > .contTop > .contOptionCamera {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow: inset -12px -12px 24px #aaaaaa, inset 12px 12px 24px #ffffff;
+  width: 16%;
+  height: inherit;
+  margin: 1% auto;
+  padding: 0.5%;
+  border-radius: 6px;
+}
+.contCentral > .contTop > .contOptionCamera > label {
+  position: relative;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgb(9, 9, 9);
+  margin: 0% 2%;
+  padding: 1%;
+  text-shadow: -4px -3px 4px rgba(0, 0, 0, 0.39), 2px 3px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 6% auto;
+  margin-bottom: 1%;
+}
+.contCentral > .contTop > .contOptionCamera > .contCheckbox {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2% auto;
+  padding: 0%;
+}
+.contCentral > .contTop > .contOptionCamera > .contCheckbox > label {
+  position: relative;
+  text-align: justify;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgb(1, 1, 68);
+  margin: 0% auto;
+  text-shadow: -4px -3px 4px rgba(0, 0, 0, 0.39), 2px 3px 4px rgba(0, 0, 0, 0.3);
+  margin: 2% auto;
+  margin-bottom: 1%;
+}
+.contCentral > .contTop > .contOptionCamera > .contCheckbox > #faceRecognition {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgba(203, 203, 203, 0.2);
+  border-radius: 9px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 1px solid rgba(203, 203, 203, 0.61);
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 2% auto;
+  margin-bottom: 1%;
+  padding: 0.3% auto;
+  background-color: rgba(242, 242, 242, 0.6);
+  transition: all 0.35s ease;
 }
 .contCentral > .contTop > .contOptions {
   position: relative;
