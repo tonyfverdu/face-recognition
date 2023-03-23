@@ -14,3 +14,4 @@ export const cameraWeb = document.querySelector("#cameraWeb")
 
 //  Constants
 export const url_Models = "./assets/models"
+export const labelsOfModels = ['George Harrison', 'John Lennon', 'Paul McCartney', 'Ringo Starr']

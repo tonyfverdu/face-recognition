@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { url_Models, imageUpload, main, infoLoad, img, cameraWeb } from "./initialitation.js"
-import { promiseAllFaceapi, printInfo, inputCamera } from "./functions.js"
+import { promiseAllFaceapi, printInfo, inputCamera, recognitionOfFaces } from "./functions.js"
 
 
 export let newCanvas = false
